@@ -1,0 +1,49 @@
+
+<div class="parent row">
+  <div class="col-6 login-part">
+    <div>
+        <img class="signin_logo" src="../../../assets/user-profile (1).png" alt="">
+    </div>
+
+    <!-- EMAIL FIELD  -->
+   <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <input type="text" class="form-control" placeholder="Enter email address" name="email"formControlName="email" autocomplete="off">
+    <br>
+    <div *ngIf="invalid && this.loginForm.controls.email.errors" class="error_filed">
+        <span *ngIf="invalid && this.loginForm.controls.email.errors['required']">Email must required</span>
+        <span *ngIf="invalid && this.loginForm.controls.email.errors['pattern']">Enter a valid email</span>
+    </div>
+    <input type="password" class="form-control" placeholder="password" name="password"  formControlName="password" autocomplete="off">
+    <br>
+    <div *ngIf="invalid && this.loginForm.controls.password.errors" class="error_filed">
+        <span *ngIf="invalid && this.loginForm.controls.password.errors['required']">Password must required</span>
+        <!-- <span *ngIf="invalid && this.loginForm.controls.email.errors['pattern']">Enter a valid email</span> -->
+    </div>
+      <button mat-raised-button class="w-100 login-btn">Login</button>   
+   </form>
+    <br><br>
+    <span>New to My note  ?<a routerLink="/register">Create an account</a> </span>
+  </div>
+  <div class="col-6 carousel-part" style="display: flex; flex-direction:column; transform: translateY(-40%);">
+    <!-- carousel start -->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" >
+          <img  src='../../../assets/c4.png' class="d-block w-100" alt="first image" />
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/c3.png" class="d-block w-100" alt="second image" />
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/c1.png" class="d-block w-100" alt="third iamge" />
+        </div>
+      </div>
+      
+    </div> 
+    <!-- carousel-end -->
+  </div>
+</div>

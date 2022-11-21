@@ -1,0 +1,8 @@
+.main{
+    width: 350px;
+}
+button{
+    margin: 4px;
+    background:linear-gradient(155deg,#4a97d2, #23c1f1);
+    color: #fff;
+}

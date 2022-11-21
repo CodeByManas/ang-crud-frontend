@@ -1,0 +1,49 @@
+<div class="main">
+  <h5>Update details</h5>
+  <br />
+  <form [formGroup]="addNewRecord" (ngSubmit)="saveRecord()">
+    <input
+      class="form-control"
+      placeholder="Name"
+      type="text"
+      name=""
+      id=""
+    /><br />
+    <input
+      class="form-control"
+      placeholder="Contact"
+      type="text"
+      name=""
+      id=""
+    /><br />
+    <input
+      class="form-control"
+      placeholder="Email"
+      type="email"
+      name=""
+      id=""
+    /><br />
+    <input class="form-control" type="date" name="" id="" /><br />
+    <input class="form-check-input" type="radio" name="" id="" value="Male" />
+    Male
+    <input class="form-check-input" type="radio" name="" id="" value="Female" />
+    Female<br />
+    <input class="form-check-input" type="radio" name="" value="Married" />
+    Married
+    <input
+      class="form-check-input"
+      type="radio"
+      name=""
+      value="Unmarried"
+      id=""
+    />
+    Unmarried<br />
+    <br />
+    <textarea class="form-control" placeholder="Address" name=""></textarea
+    ><br />
+    <div>
+      <button class="btn">Update</button>
+      <button class="btn">Cancel</button>
+    </div>
+  </form>
+</div>

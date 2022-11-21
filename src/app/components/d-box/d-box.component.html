@@ -1,0 +1,29 @@
+
+<p  style="color: green;" *ngIf="this.errorMsg == 'Record has been deleted successfully.'">{{this.errorMsg}}</p>
+<p  style="color: green;" *ngIf="this.errorMsg == 'Record has been updated successfully'">{{this.errorMsg}}</p>
+<p  style="color: green;" *ngIf="this.errorMsg == 'Record has been added successfully'">{{this.errorMsg}}</p>
+<p style="color: green;" *ngIf="this.errorMsg == 'User registrated successfully.'">{{this.errorMsg}}</p>
+<p style="color: green;" *ngIf="this.errorMsg == 'User login successfull'">{{this.errorMsg}}</p>
+<p style="color: green;" *ngIf="this.errorMsg == 'User logged out successfully.'">{{this.errorMsg}}</p>
+
+<p style="color: red;" *ngIf="this.errorMsg == 'Do you want to delete the record ?'">{{this.errorMsg}}</p>
+<p style="color: red;" *ngIf="this.errorMsg == 'There must be few changes in data'">{{this.errorMsg}}</p>
+<p style="color: red;" *ngIf="this.errorMsg == 'Entered email & contact are already exists in database'">{{this.errorMsg}}</p>
+<p style="color: red;" *ngIf="this.errorMsg == 'Entered contact is already exists in database'">{{this.errorMsg}}</p>
+<p style="color: red;" *ngIf="this.errorMsg == 'Entered email is already exists in database'">{{this.errorMsg}}</p>
+<p style="color: red;" *ngIf="this.errorMsg == 'Entered email & password are already exists in database'">{{this.errorMsg}}</p>
+<p style="color: red;" *ngIf="this.errorMsg == 'Entered email is already exists in database.Choose another'">{{this.errorMsg}}</p>
+<p style="color: red;" *ngIf="this.errorMsg == 'Entered password is already exists in database.Choose another'">{{this.errorMsg}}</p>
+<p style="color: red;" *ngIf="this.errorMsg == 'Entered email & password are not found'">{{this.errorMsg}}</p>
+<p style="color: red;" *ngIf="this.errorMsg == 'Entered email is wrong'">{{this.errorMsg}}</p>
+<p style="color: red;" *ngIf="this.errorMsg == 'Entered password is wrong'">{{this.errorMsg}}</p>
+
+<div mat-dialog-actions *ngIf="showHideBtns">
+    <button mat-button (click)="deleteRecord()">Yes</button>
+    <button mat-button mat-dialog-close>No</button>
+</div>
+
+
+
+
+

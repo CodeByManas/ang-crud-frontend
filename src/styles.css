@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Dosis&family=Fira+Sans:wght@200&family=Indie+Flower&family=Josefin+Sans:wght@300&family=Lobster&family=Nunito:wght@200&family=Open+Sans:wght@300&family=PT+Sans+Narrow&family=Source+Sans+Pro:wght@300&family=Ubuntu:wght@300&family=Vujahday+Script&family=Yanone+Kaffeesatz&display=swap');
+html, body { height: 100%; }
+body { margin: 0; 
+    font-family: 'Dongle', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Vujahday Script', cursive;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+letter-spacing: 1.3px;
+word-spacing: 1.5px;
+}

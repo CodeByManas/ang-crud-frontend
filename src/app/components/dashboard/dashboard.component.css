@@ -1,0 +1,113 @@
+.parent{
+    margin-top: 50px;
+    width: 90vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    background-color: #f9ffff;
+    width: 320px;
+    height: 280px;
+    padding: 8px;
+    position: relative;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    
+}
+
+.noDataMessage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.noDataMessage p{
+    font-size: 20px;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.userDetailSection{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.btn-group{
+    position: absolute;
+    bottom: -50px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+.btn-group button{
+    /* border:1px solid #4a97d2; */
+    background:transparent;
+    color: #4a97d2;
+    cursor: pointer;
+   
+}
+
+.btn-group button:hover{
+    color:#fff;
+    letter-spacing: 1px;
+    background: linear-gradient(180deg,#4a97d2, #23c1f1);
+}
+.card-header{
+    left: 0;
+    top: 0;
+    position:absolute;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(180deg,#4a97d2, #23c1f1);;
+    color: #fff;
+}
+.card-body{
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+
+
+@media only screen and (max-width:1090px) {
+    .card{
+        width: 270px;
+        min-height: 240px;
+        margin: auto;
+        margin-bottom: 10px;
+        display: inline-block;
+        margin-left: 20px;
+    }
+    .card p{
+        font-size: 12px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    /* border-radius: 10px; */
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(130deg,#4a97d2, #23c1f1);
+    /* border-radius: 10px; */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(130deg,#4a97d2, #23c1f1);
+  }
+
+  .card-header{
+    position: relative;
+    top: 0;
+  }

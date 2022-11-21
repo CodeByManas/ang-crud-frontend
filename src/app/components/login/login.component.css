@@ -1,0 +1,96 @@
+
+.parent {
+    /* background:linear-gradient(#ffcddd 25px,rgb(255, 255, 227)); */
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.parent .col-6{
+    width: 350px;
+    height: 200px;
+    padding: 12px;
+}
+.parent .verticalLine{
+    width: 0.2px;
+    height: 80vh;
+    background-color: #000000;
+}
+span{
+    color: #000000;
+    padding: 6px;
+}
+span a{
+    text-decoration: none;
+    padding: 8px;
+    color: #268fe0;
+    cursor: pointer;
+}
+mat-progress-bar{
+    position: absolute;
+    width: 100%;
+}
+.signin_logo{
+    width: 80px;
+    height: 80px;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 50%;
+    /* margin-bottom: 20px; */
+    position: relative;
+}
+button{
+    background:linear-gradient(155deg,#4a97d2, #23c1f1);
+    color: #fff;
+    width: 100%;
+}
+
+button:hover{
+    color: #23c1f1;
+    background: transparent;
+    border: 1px solid #23c1f1;
+}
+/* .login-btn{
+    background:linear-gradient(155deg,#4a97d2, #23c1f1);
+    color: #fff;
+}
+.login-btn:hover{
+    color: #4a97d2;
+    border: 1px solid #4a97d2;
+    background: transparent;
+} */
+.login-part{
+    display: flex; 
+    flex-direction:column; 
+    transform: translateY(-40%);
+}
+
+.error_filed span{
+    position: relative;
+   top: -10px;
+    color: red;
+}
+
+
+
+
+
+
+
+
+/* media query  */
+@media only screen and (max-width: 700px) {
+   .carousel-part{
+    display: none;
+    /* position: absolute;
+    transform: translateY(-50%); */
+    z-index: -1000;
+   }
+   .login-part{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-70%);
+   }
+}

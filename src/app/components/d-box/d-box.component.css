@@ -1,0 +1,6 @@
+button{
+    cursor: pointer;
+    color:#fff;
+    letter-spacing: 1px;
+    background: linear-gradient(80deg,#4a97d2, #23c1f1);
+}

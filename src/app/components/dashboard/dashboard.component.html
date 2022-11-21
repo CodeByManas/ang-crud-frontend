@@ -1,0 +1,42 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="parent">
+  <div class="row" *ngIf="!noDataContent">
+    <div
+      class="col"
+      *ngFor="let data of listOfAllRecords"
+    >
+      <div class="card">
+        <div class="card-header">
+          <p class="card-title" ><mat-icon>face</mat-icon>  {{ data.name | titlecase }}</p>
+        </div>
+        <div class="card-body" *ngIf="listOfAllRecords">
+        
+          <!-- <p class="card-text" title="user ID"><mat-icon> vpn_key</mat-icon> {{ data._id }}</p> -->
+          <div class="userDetailSection">
+            <div>
+              <p class="card-text"><mat-icon> call</mat-icon> +91 {{ data.contact }}</p>
+              <p class="card-text"><a href="mailto:{{data.email}}"> <mat-icon>mark_as_unread</mat-icon> {{ data.email }}</a> </p>
+              <p class="card-text"><mat-icon>calendar_today</mat-icon> {{ data.dob}}</p>
+            </div>
+            <div>
+              <p class="card-text"><mat-icon> person_pin</mat-icon>{{ data.gender | titlecase}}</p>
+              <p class="card-text"><mat-icon>signal_wifi_statusbar_connected_no_internet_4</mat-icon> {{ data.maritalstatus | titlecase }}</p>
+              <p class="card-text"><mat-icon> person_pin_circle</mat-icon> {{ data.address | titlecase }}</p>
+            </div>
+          </div>
+          <div style="margin-left: 30px " class="btn-group">
+            <button class="btn" (click)="updateRecord(data._id)"><mat-icon>create</mat-icon></button>
+            <button class="btn" (click)="onDeleteRecord(data._id)">
+                <mat-icon>delete_sweep</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="noDataContent" class="noDataMessage">
+    <p>No data has found...!</p>
+  </div>
+</div>

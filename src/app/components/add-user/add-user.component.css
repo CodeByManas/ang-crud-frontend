@@ -1,0 +1,85 @@
+.parent {
+  width: 90vw;
+}
+
+form {
+  margin: auto;
+  width: 50%;
+  margin-top: 100px;
+}
+
+
+button{
+    margin: 4px;
+    background:linear-gradient(155deg,#4a97d2, #23c1f1);
+    color: #fff;
+    width: 30%;
+}
+
+button:hover{
+    border: 1px solid #4a97d2;
+    color: #4a97d2;
+    background: transparent;
+}
+
+
+@media only screen and (max-width: 990px) {
+  .imgSection {
+    display: none;
+  }
+  form {
+    width: 100%;
+    position: relative;
+    margin-left: 50%;
+  }
+
+  .imgSection img {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  form {
+    width: 150%;
+    position: relative;
+    margin-left: 30%;
+  }
+}
+
+
+/* for radio buttons  */
+:host ::ng-deep .mat-radio-outer-circle {
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+:host ::ng-deep .mat-radio-inner-circle {
+  border-radius: 2px;
+  background-color: transparent !important;
+  height: 30px;
+  width: 15px;
+  margin-top: -8px;
+  margin-left: 3px;
+}
+:host ::ng-deep .mat-radio-checked .mat-radio-outer-circle {
+  background: linear-gradient(155deg, #4a97d2, #23c1f1) !important;
+}
+:host ::ng-deep .mat-radio-checked .mat-radio-inner-circle {
+  transform: rotate(45deg) scale(0.5);
+}
+
+.saveBtn{
+    background: linear-gradient(155deg, #4a97d2, #23c1f1) !important;
+    color: #000;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mat-chip{
+    background: linear-gradient(155deg, #4a97d2, #23c1f1) !important;
+}
+
+
+
+

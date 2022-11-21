@@ -1,0 +1,163 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="parent">
+  <div class="row" style="display: flex; align-items: center; flex-wrap: wrap">
+    <div class="col-6 col-xsm-12">
+      <!-- add new record section  -->
+      <!-- <div *ngIf="errorMsg != null && errorBlock">
+        <mat-error>{{errorMsg}}</mat-error>
+      </div> -->
+      
+
+
+
+
+
+      <form [formGroup]="addNewRecord" >
+        <input
+          class="form-control"
+          placeholder="Name"
+          formControlName="name"
+          type="text"
+          name=""
+          id=""
+        />
+         <!-- error part  -->
+         <div *ngIf="submitted && this.addNewRecord.controls.name.errors">
+            <mat-error
+              *ngIf="
+                submitted && this.addNewRecord.controls.name.errors['required']
+              "
+            >
+              Name is <strong>required</strong>
+            </mat-error>
+          </div>
+        <br />
+        <input
+          class="form-control"
+          placeholder="Contact"
+          formControlName="contact"
+          type="text"
+          name=""
+          id=""
+        />
+        <div *ngIf="submitted && this.addNewRecord.controls.contact.errors">
+            <mat-error
+              *ngIf="
+                submitted &&
+                this.addNewRecord.controls.contact.errors['pattern']
+              "
+            >
+              Please enter a valid contact
+            </mat-error>
+            <mat-error
+              *ngIf="
+                submitted &&
+                this.addNewRecord.controls.contact.errors['required']
+              "
+            >
+              Contact is <strong>required</strong>
+            </mat-error>
+          </div>
+        <br />
+        <input
+          class="form-control"
+          placeholder="Email"
+          formControlName="email"
+          type="email"
+          name=""
+          id=""
+        />
+        <div *ngIf="submitted && this.addNewRecord.controls.email.errors">
+            <mat-error
+              *ngIf="
+                submitted && this.addNewRecord.controls.email.errors['pattern']
+              "
+            >
+              Please enter a valid email address
+            </mat-error>
+            <mat-error
+              *ngIf="
+                submitted && this.addNewRecord.controls.email.errors['required']
+              "
+            >
+              Email is <strong>required</strong>
+            </mat-error>
+          </div>
+        <br />
+        <input class="form-control" formControlName="dob" type="date" name="" id="" />
+        <mat-error
+            *ngIf="
+              submitted &&
+              this.addNewRecord.controls.dob.errors &&
+              this.addNewRecord.controls.dob.errors['required']
+            "
+          >
+            DOB is <strong>required</strong>
+          </mat-error>
+        <br />
+        <input class="form-check-input" formControlName="gender" type="radio" name="" id="" value="Male" />
+        Male
+        <input class="form-check-input" formControlName="gender" type="radio" name="" id="" value="Female" />
+        Female
+        
+        <mat-error
+            *ngIf="
+              submitted &&
+              this.addNewRecord.controls.gender.errors &&
+              this.addNewRecord.controls.gender.errors['required']
+            "
+          >
+            Please choose a gender
+          </mat-error>
+          <br />
+        <input class="form-check-input" formControlName="maritalstatus" type="radio" name="" value="Married" />
+        Married
+        <input
+          class="form-check-input"
+          formControlName="maritalstatus"
+          type="radio"
+          name=""
+          value="Unmarried"
+          id=""
+        />
+        Unmarried
+        <mat-error
+            *ngIf="
+              submitted &&
+              this.addNewRecord.controls.maritalstatus.errors &&
+              this.addNewRecord.controls.maritalstatus.errors['required']
+            "
+          >
+            Please choose a marital status
+          </mat-error>
+          <br />
+        <br />
+        <textarea class="form-control" formControlName="address" placeholder="Address" name=""></textarea
+        >
+        <mat-error
+            *ngIf="
+              submitted &&
+              this.addNewRecord.controls.address.errors &&
+              this.addNewRecord.controls.address.errors['required']
+            "
+          >
+            Please mention a address
+          </mat-error>
+          <br />
+        <div>
+          <button class="btn" *ngIf="updateBtn" (click)="updateRecord()">Update</button>
+          <button class="btn" *ngIf="updateBtn" routerLink="/dashboard">Go back</button>
+          <button class="btn" *ngIf="!updateBtn" (click)="saveRecord()" >Add</button>
+          <button class="btn" *ngIf="!updateBtn" routerLink="/dashboard">Go to list</button>
+          <!-- <button class="btn" (click)="resetForm()">Reset</button> -->
+        </div>
+      </form>
+    </div>
+
+    <!-- RIGHT SIDE IMAGE PART  -->
+    <div class="col-6 col-xsm-12 imgSection">
+      <img src="../../../assets/add-data.png" alt="" />
+    </div>
+  </div>
+</div>

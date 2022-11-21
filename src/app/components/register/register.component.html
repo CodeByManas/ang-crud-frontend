@@ -1,0 +1,94 @@
+
+  
+
+  
+<div class="parent row">
+    <div class="col-6 login-part">
+      <div>
+          <img class="signin_logo" src="../../../assets/user-profile (1).png" alt="">
+      </div>
+  
+      <!-- EMAIL FIELD  -->
+      <form [formGroup]="register" (ngSubmit)="registerUser()">
+        <!-- for name  -->
+        <input type="text" 
+        class="form-control" 
+        placeholder="Full name"
+        formControlName="name"
+        ><br>
+        <div *ngIf="submitted && this.register.controls.name.errors" class="error_filed">
+            <span *ngIf="submitted && this.register.controls.name.errors['required']">Name must required</span>
+            <span *ngIf="submitted && this.register.controls.name.errors['pattern']">Enter a valid name</span>
+        </div>
+
+        <!-- for contact  -->
+        <input type="text" 
+        class="form-control" 
+        placeholder="Contact"
+        formControlName="contact"
+        ><br>
+        <div *ngIf="submitted && this.register.controls.contact.errors" class="error_filed">
+            <span *ngIf="submitted && this.register.controls.contact.errors['required']">Contact must required</span>
+            <span *ngIf="submitted && this.register.controls.contact.errors['pattern']">Enter a valid contact</span>
+        </div>
+        <!-- for email  -->
+        <input type="email" 
+        class="form-control" 
+        placeholder="Emai address"
+        formControlName="email"
+        ><br>
+        <div *ngIf="submitted && this.register.controls.email.errors" class="error_filed">
+            <span *ngIf="submitted && this.register.controls.email.errors['required']">Email must required</span>
+            <span *ngIf="submitted && this.register.controls.email.errors['pattern']">Enter a valid email</span>
+        </div>
+        <!-- for password  -->
+        <input type="password" 
+        class="form-control" 
+        placeholder="Password"
+        formControlName="pwd"
+        ><br>
+        <div *ngIf="submitted && this.register.controls.pwd.errors" class="error_filed">
+            <span *ngIf="submitted && this.register.controls.pwd.errors['required']">password must required</span>
+            <span *ngIf="submitted && this.register.controls.pwd.errors['pattern']">Password must contain uppercase, lowercase, special character & number.</span>
+        </div>
+
+        <!-- for confirm password  -->
+        <input type="password" 
+        class="form-control" 
+        placeholder="Confirm password"
+        formControlName="cpwd"
+        (keypress)="match()"
+        ><br>
+        <div *ngIf="submitted && this.register.controls.cpwd.errors" class="error_filed">
+            <span *ngIf="submitted && this.register.controls.cpwd.errors['required']">Confirm password must required</span>            
+        </div>
+        <span style="color: red;" *ngIf="cpwd && this.register.value.pwd != this.register.value.cpwd">Password and confirm password must be same.</span>
+       
+        <button class="btn">Create user</button><br><br>
+        <span>Already have a account  ?<a routerLink="/login">Login</a> </span>
+    </form>
+    </div>
+    <div class="col-6 carousel-part" style="display: flex; flex-direction:column; transform: translateY(-40%);">
+      <!-- carousel start -->
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" >
+            <img  src='../../../assets/c4.png' class="d-block w-100" alt="first image" />
+          </div>
+          <div class="carousel-item">
+            <img src="../../../assets/c3.png" class="d-block w-100" alt="second image" />
+          </div>
+          <div class="carousel-item">
+            <img src="../../../assets/c1.png" class="d-block w-100" alt="third iamge" />
+          </div>
+        </div>
+        
+      </div> 
+      <!-- carousel-end -->
+    </div>
+  </div>
+  
